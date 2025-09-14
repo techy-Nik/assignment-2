@@ -1,101 +1,117 @@
-📘 Calculator Project with Automated Tests
-🎯 Objective
+## 📘 README.md 
 
-This project is a simple Python calculator application that supports addition, subtraction, multiplication, and division.
-It includes automated testing with pytest, code coverage reports, and continuous integration using GitHub Actions.
+```markdown
+# 📘 Calculator Project with Automated Tests
 
-📂 Project Structure
-assignment2/
+[![Build Status](https://github.com/techy-Nik/assignment-2/actions/workflows/python-app.yml/badge.svg)](https://github.com/techy-Nik/assignment-2/actions)
+
+## 📌 Overview
+This project is a **simple calculator application in Python** that supports basic arithmetic operations:
+- Addition
+- Subtraction
+- Multiplication
+- Division  
+
+The project includes **automated tests** using `pytest` and a **CI/CD pipeline** with GitHub Actions to ensure code quality and correctness.
+
+---
+
+## 🚀 Features
+- Command-line interface (REPL style)
+- Handles negative numbers (e.g., `-5 * -3`)
+- Automated testing with `pytest`
+- Code coverage reports with `pytest-cov`
+- Continuous Integration via GitHub Actions
+
+---
+
+## 🛠️ Project Structure
+```
+
+assignment-2/
 │── app/
-│   ├── __init__.py
+│   ├── **init**.py
 │   ├── calculator/
-│   │   └── __init__.py     # Calculator functions
-│   ├── operations/
-│   │   └── __init__.py
-│
-├── tests/
-│   ├── __init__.py
-│   └── test_calculator.py  # Unit tests
-│
-├── main.py                 # REPL command-line calculator
-├── requirements.txt        # Dependencies
-├── pytest.ini              # Pytest configuration
-├── .coveragerc             # Coverage configuration
-└── .github/
-    └── workflows/
-        └── python-app.yml  # GitHub Actions CI
+│   │   └── **init**.py   # Calculator class with add, subtract, multiply, divide
+│   └── operations/
+│       └── **init**.py   # (optional: reusable operation functions)
+│── tests/
+│   └── test\_calculator.py
+│── main.py               # REPL entry point
+│── pytest.ini            # Pytest configuration
+│── requirements.txt      # Project dependencies
+│── .github/workflows/
+│   └── python-app.yml    # GitHub Actions workflow
 
-⚙️ Installation & Setup
+````
 
-Clone the repo
+---
 
-git clone <your-repo-url>
-cd assignment2
+## ▶️ Usage
+1. Run the program:
+   ```bash
+   python main.py
+````
 
+2. Enter expressions in the format:
 
-Create virtual environment
+   ```
+   number operator number
+   ```
 
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
+   ✅ Examples:
 
+   ```
+   5 + 3
+   -5 * -3
+   10 / 2
+   ```
 
-Install dependencies
+   ❌ Invalid (no spaces):
 
-pip install -r requirements.txt
+   ```
+   2+-3
+   ```
 
-▶️ Usage (REPL Calculator)
+---
 
-Run:
+## 🧪 Running Tests
 
-python main.py
+Run all tests with coverage:
 
-
-Example session:
-
-Simple Calculator (type 'exit' to quit)
-Enter expression (e.g. 2 + 3): -5 + 3
--2.0
-Enter expression (e.g. 2 + 3): -5 * -3
-15.0
-Enter expression (e.g. 2 + 3): exit
-
-
-⚠️ Note: Inputs must include spaces between numbers and operators (e.g. -5 * -3 ✅, not -5*-3 ❌).
-
-✅ Testing
-
-Run all tests:
-
+```bash
 pytest
+```
 
+Generate an HTML coverage report:
 
-This will:
-
-Run unit tests
-
-Check linting (pytest-pylint)
-
-Generate coverage reports
-
-To view HTML coverage report:
-
+```bash
 pytest --cov=app --cov-report=html
-open htmlcov/index.html  # Linux/Mac
-start htmlcov/index.html # Windows
+```
 
-🔄 Continuous Integration (CI)
+Then open `htmlcov/index.html` in your browser.
 
-This project uses GitHub Actions for CI:
+---
 
-On each push, tests and linting run automatically.
+## ⚙️ Continuous Integration
 
-Coverage is reported in the workflow logs.
+This project uses **GitHub Actions** for CI:
 
-🎓 Learning Outcomes
+* Runs tests automatically on every push
+* Verifies code quality with `pytest` and `pytest-pylint`
+* Ensures coverage is reported
 
-Created Python application with automated testing (CLO3).
+You can view CI results here:
+👉 [GitHub Actions](https://github.com/techy-Nik/assignment-2/actions)
 
-Configured GitHub Actions for Continuous Integration (CLO4).
+---
 
-Developed a REPL command-line calculator (CLO5).
+## 🎯 Learning Outcomes
+
+This project demonstrates:
+
+* ✅ Writing Python applications with automated testing (CLO3)
+* ✅ Setting up GitHub Actions for CI/CD (CLO4)
+* ✅ Building a command-line REPL application (CLO5)
+
+
